@@ -18,6 +18,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -30,6 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DisplayName("tp-spring-0")
+
 class LibrariesApplicationTests {
 
 	@Autowired
@@ -40,6 +42,11 @@ class LibrariesApplicationTests {
 
 	@Autowired
 	private DatabaseTestHelper databaseTestHelper;
+
+//	ci dessous pour la sécurité. A completer ...
+//	@BeforeAll
+//	public static void beforeall
+//	rest.template
 
 	//As long as we have some other integration tests, this is useless
 	//	@Test
